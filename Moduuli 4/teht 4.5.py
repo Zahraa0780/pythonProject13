@@ -1,24 +1,23 @@
-def kirjaudu_sisaan(oikea_tunnus, oikea_salasana):
-    yritykset = 0
+def main():
+    correct_username = "python"
+    correct_password = "rules"
+    max_attempts = 5
+    attempts = 0
 
-    while yritykset < 5:
-        tunnus = input("12345678: ")
-        salasana = input("19999: ")
+    while attempts < max_attempts:
+        username = input("Syötä käyttäjätunnus: ")
+        password = input("Syötä salasana: ")
 
-        if tunnus == oikea_tunnus and salasana == oikea_salasana:
+        if username == correct_username and password == correct_password:
             print("Tervetuloa!")
-            return True
+            break
         else:
             print("Väärä käyttäjätunnus tai salasana. Yritä uudelleen.")
-            yritykset += 1
+            attempts += 1
 
-    print("Pääsy evätty. Liian monta yritystä.")
-    return False
+    if attempts == max_attempts:
+        print("Pääsy evätty.")
 
-def main():
-    oikea_tunnus = "python"
-    oikea_salasana = "rules"
 
-    kirjaudu_sisaan(oikea_tunnus, oikea_salasana)
 
 
