@@ -13,16 +13,12 @@ def main():
             print("Virheellinen syöte! Syötä luku tai jätä tyhjä rivi lopettaaksesi.")
 
     if numbers:
-        min_number = min(numbers)
-        max_number = max(numbers)
-        print("Pienin luku:", min_number)
-        print("Suurin luku:", max_number)
+        numbers.sort(reverse=True)
+        print("Viisi suurinta lukua:")
+        for i in range(min(5,
+                           len(numbers))):
+            print(numbers[i])
     else:
         print("Et syöttänyt yhtään lukua.")
-
-
-
-
-
 
 

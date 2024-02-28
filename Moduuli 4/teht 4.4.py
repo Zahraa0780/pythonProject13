@@ -30,6 +30,4 @@ def pelaa():
             break
 
 
-if __name__ == "__main__":
-    print("Tervetuloa pelaamaan arvauspeliä!")
-    pelaa()
+
